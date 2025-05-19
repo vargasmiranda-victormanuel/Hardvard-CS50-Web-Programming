@@ -1,0 +1,5 @@
+#Convertir una vez
+sass variables.scss:variables.css
+
+#automatizar la compilacion
+sass -watch variables.scss:variables.css
