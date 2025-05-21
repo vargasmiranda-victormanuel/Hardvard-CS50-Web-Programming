@@ -1,0 +1,50 @@
+#Track the file to perform changes and commit on it
+git add <filename>
+
+#Commit a file to the local version of the repository
+git commit -m "message"
+
+#What is currently happening in the repository
+git status
+
+#Push to the online version
+git push
+
+#for additional changes you need to do
+git track again
+
+#if you want to commit all files that have been changed then do
+git commit -am "message"
+#then do... to go to online version
+git push
+
+#download latest version from online version
+get pull
+
+#merge conflicts. pull edit and push.
+
+#see history of commits
+git log
+
+#Revert to an older version of the repository
+git reset --hard <commit message>
+git reset --hard origin/master (reset to the version of master branch)
+
+#what branch am I currently on?
+git branch
+
+#create a new branch
+git checkout -b <name of the branch>
+
+#switch to an existing branch
+git checkout <name  of the branch>
+
+#merge into main
+git merge <name of the branch you want to merge into main>
+
+
+Github pages
+yourusername.hithub.int
+git clone
+create index.html
+the you can open your own webpage
