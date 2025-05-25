@@ -1,0 +1,111 @@
+a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin:0;
+}
+header img{
+    width: 5rem;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header nav ul li{
+    margin-right: 1rem;
+    margin-left: auto;
+    font-family: "Google Sans";
+    font-style: "normal";
+}
+header nav ul li a{
+    margin-right: 1rem;
+    color: #333;
+    font-size: 0.9rem;
+}
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+.search-section{
+    text-align: center;
+    padding: 5rem 1.5rem;
+}
+.search-section img{
+    width: 17rem;
+    margin-bottom: 1.5rem;
+}
+.search-section form{
+    position: relative;
+}
+.search-section form input[type="text"]{
+    padding: 1rem;
+    width: 100%;
+    max-width: 520px;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Google_Magnifying_Glass.svg/2048px-Google_Magnifying_Glass.svg.png") no-repeat left;
+    background-size: 20px;
+    background-position: 10px;
+    border-radius: 30px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+    text-align: left;
+    padding-left: 40px;
+}
+.search-section form input[type="text"]:hover{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+.buttons{
+    align-items: center;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.buttons input{
+    background-color: #f8f8f8;
+    border: none;
+    padding: 0.6rem 1rem;
+    margin-right: 1rem;
+}
+.buttons input:hover{
+    border-radius: 0.2rem;
+    border: solid 0.02rem rgba(0,0,0,0.2);
+    cursor: pointer;   
+}
+h1{
+    margin: 2rem;
+    color: rgb(255,62,48);
+    font-size: 20px;
+    font-weight:normal;
+}
+.advanced-field{
+    display: flex;
+    justify-content:left;
+}
+.header-within-form{
+    justify-content:left;
+    margin-bottom: 2rem;
+    font-size: 18px;
+}
+.advanced-field label{
+    width: 15%;
+    min-width: 190px;
+}
+.advanced-field input[type="text"]{
+    width: 40%;
+    min-width: 250px;
+}
+.advanced-submit{
+    background-color: rgb(66,133,244);
+    font-weight: bold;
+    color: white;
+    padding: 4px;
+    border-style:groove;
+    margin-left: 27%;
+}
+@media (min-width: 768){
+    .search-bar img{
+        width: 24rem;
+    }
+}
