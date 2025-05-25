@@ -1,0 +1,13 @@
+#Go to Location of the project where virtual environment will be created
+C:\Users\Vargas\Documents\GitHub\Hardvard-CS50-Web-Programming\Leasons\4 Django
+
+#Create Virtual Environment
+C:\Users\Vargas\pyver\python3133\python -m venv Django_leason
+(Location of Python version to use) -m venv (Nombre del Virtual Environment)
+
+#Activate Environment
+Django_leason\Scripts\activate
+(Virtual Environment)\Scripts\activate
+
+#Install Django
+pip install Django
