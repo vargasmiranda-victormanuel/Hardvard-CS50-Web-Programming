@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="google_style.css">
+        <title>Google</title>
+    </head>
+    <body>
+        <header>
+            <h1></h1>
+            <nav>
+                <ul>
+                    <li><a href="image_search.html" rel="noreferrer">Images</a></li>
+                    <li><a href="advanced_serach.html" rel="noreferrer">Advanced</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="search-section">
+            <img src="Google_2015_logo.svg.png" alt="Google">
+            <form action="https://www.google.com/search" rel="noreferrer">
+                <input type="text" class="search" name="q">
+                <div class="buttons">
+                    <input type="submit" value="Google Search">
+                    <input type="button" value="I'm Feeling Lucky" onclick="feelingLucky()">
+                </div>
+            </form>
+            <script>
+                function feelingLucky() {
+                    const query = document.querySelector('input[name="q"]').value;
+                    if (query.trim() !== "") {
+                        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query) + "&btnI=I";
+                    }
+                }
+            </script>
+        </section>   
+    </body>
+</html>
