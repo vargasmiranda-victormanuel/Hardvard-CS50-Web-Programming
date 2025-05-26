@@ -11,3 +11,18 @@ Django_leason\Scripts\activate
 
 #Install Django
 pip install Django
+
+#Initiate Django project
+django-admin startproject Django_lecture
+
+#Get into project created
+cd Django_lecture
+
+#Start Django application
+python manage.py runserver
+
+#exit server
+Ctrl+C
+
+#create an app
+python manage.py startapp mewyear
