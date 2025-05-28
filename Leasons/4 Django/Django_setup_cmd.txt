@@ -12,7 +12,7 @@ Django_leason\Scripts\activate
 #Install Django
 pip install Django
 
-#Initiate Django project
+#Create Django project
 django-admin startproject Django_lecture
 
 #Get into project created
@@ -26,3 +26,6 @@ Ctrl+C
 
 #create an app
 python manage.py startapp mewyear
+
+#Django not to store data in tables yet
+python manage.py migrate
