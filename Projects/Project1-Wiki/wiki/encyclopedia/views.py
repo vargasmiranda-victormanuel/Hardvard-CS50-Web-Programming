@@ -74,10 +74,9 @@ def new_wiki_page(request):
                 "page_content": md_to_html(title)
             })
 
-def edit(request):
+def edit(request, title):
     if request.method == "POST":
-        title = request.POST['entry']
-        md_content = util.get_entry(title)
+        md_content = util.get_entry(title)  
         md_content = md_content.replace("\r", "")
         return render(request, "encyclopedia/edit.html", {
             "title": title,
