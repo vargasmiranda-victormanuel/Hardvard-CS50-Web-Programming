@@ -1,0 +1,11 @@
+C:\Users\Vargas\pyver\python3133\python -m venv wiki_venv
+
+wiki_venv\Scripts\activate
+
+pip install Django
+
+cd wiki
+
+python manage.py runserver
+
+pip install markdown
