@@ -9,3 +9,6 @@ cd wiki
 python manage.py runserver
 
 pip install markdown
+
+
+submit50 web50/projects/2020/x/wiki
