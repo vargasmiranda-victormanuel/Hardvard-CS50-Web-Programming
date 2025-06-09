@@ -1,0 +1,24 @@
+#Install touch with node.js
+npm install touch-cli -g
+
+#creates file
+touch flights.sql
+
+#download sqlite and add to environment variables. then restart vscode
+
+#Enter the sqlite to start writing commands
+sqlite3 flights.sql
+
+CREATE TABLE flights(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    duration INTEGER NOT NULL
+);
+
+#show tables
+.tables
+
+INSERT INTO flights (origin, destination, duration) VALUES ('New York', 'London', 415);
+
+SELECT * FROM flights;
