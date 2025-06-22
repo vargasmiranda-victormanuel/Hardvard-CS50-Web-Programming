@@ -59,3 +59,20 @@ f.save()
 
 #query all orgining
 lhr.arrivals.all()
+
+
+#Saving some other records
+jfk = Airport.objects.filter(code='JFK').first()
+cdg = Airport.objects.filter(code='CDG').first()
+f = Flight(origin=jfk, destination=cdg, duration=435)
+f.save()
+
+
+
+#Create admin account
+python manage.py createsuperuser
+name: vargas
+email address: victorvargasmiranda.vm@gmail.com
+password: ---------
+
+f = Flight.objects.filter(origin=1).first()

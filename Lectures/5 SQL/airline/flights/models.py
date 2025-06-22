@@ -7,10 +7,6 @@ class Airport(models.Model):
 
     def __str__(self):
         return f"{self.city} ({self.code})"
-    
-    class Meta:
-        managed = False
-        db_table = 'flights_airport'
 
 class Flight(models.Model):
     origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='departures')
@@ -19,7 +15,11 @@ class Flight(models.Model):
 
     def __str__(self):
         return f"{self.origin} to {self.destination} ({self.duration} min)"
-    
-    class Meta:
-        managed = False
-        db_table = 'flights_flight'
+
+class Passenger(models.Model):
+    first = models.CharField(max_length=64)
+    last = models.CharField(max_length=64)
+    flights = models.ManyToManyField(Flight, blank=True, related_name='passengers')
+
+    def __str__(self):
+        return f"{self.first} {self.last}"
