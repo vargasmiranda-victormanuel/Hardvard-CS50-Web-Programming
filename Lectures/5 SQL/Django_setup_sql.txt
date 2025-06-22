@@ -1,0 +1,61 @@
+C:\Users\Vargas\pyver\python3133\python -m venv venv_sql
+
+venv_sql\Scripts\activate
+
+pip install Django
+
+django-admin startproject airline
+
+cd airline
+
+python manage.py startapp flights
+
+#Creation migrations of tables to work with venv_sql
+python manage.py makemigrations
+
+#actually apply the migration
+python manage.py migrate
+
+#list files
+dir
+
+#Enter Django Shell
+python manage.py shell
+
+#Insert a flight
+from flights.models import Flight
+f = Flight(origin='New York', destination='London', duration=415)
+f.save()
+
+#Query a flight
+Flight.objects.all()
+
+#Using objects
+from flights.models import Flight
+flights = Flight.objects.all()
+flights
+flight = flights.first()
+flight.duration
+
+#Make changes in the database
+python manage.py makemigrations
+#apply changes
+python manage.py migrate
+
+
+#create some airport
+from flights.models import *
+jfk = Airport(code='JFK', city='NewYork')
+jfk.save()
+lhr = Airport(code='LHR', city='London')
+lhr.save()
+cdg = Airport(code='CDG', city='Paris')
+cdg.save()
+nrt = Airport(code='NRT', city='Tokyo')
+nrt.save()
+
+f = Flight(origin=jfk, destination=lhr, duration=415)
+f.save()
+
+#query all orgining
+lhr.arrivals.all()
