@@ -19,6 +19,9 @@ python manage.py migrate
 #list files
 dir
 
+#runserver
+python manage.py runserver
+
 #Enter Django Shell
 python manage.py shell
 
