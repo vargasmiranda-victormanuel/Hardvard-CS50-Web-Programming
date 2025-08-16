@@ -79,3 +79,7 @@ email address: victorvargasmiranda.vm@gmail.com
 password: ---------
 
 f = Flight.objects.filter(origin=1).first()
+
+#Create app for Users
+cd airline
+python manage.py startapp users
