@@ -1,0 +1,18 @@
+#Initial Setup
+C:\Users\Vargas\pyver\python3133\python -m venv venv_commerce
+
+venv_commerce\Scripts\activate
+
+pip install Django
+
+python manage.py makemigrations auctions
+
+python manage.py migrate
+
+#Initiate Application
+python manage.py runserver
+
+#After creating additional models
+python manage.py makemigrations auctions
+
+python manage.py migrate
